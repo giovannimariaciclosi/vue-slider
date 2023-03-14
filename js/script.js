@@ -51,20 +51,21 @@ Consigli del giorno:
 
 
       nextSlide() {
-        if(this.activeImageIndex < this.slides.lenght - 1) {
+        if(this.activeImageIndex < this.slides.length - 1) {
           this.activeImageIndex++;
         } else {
           this.activeImageIndex = 0;
         }
-      console.log(this.slides[0].text);
+        console.log(this.activeImageIndex);
       },
 
       prevSlide() {
         if(this.activeImageIndex == 0) {
-          this.activeImageIndex = this.slides.lenght -1;
+          this.activeImageIndex = this.slides.length -1;
         } else {
           this.activeImageIndex--;
         }
+        console.log(this.activeImageIndex);
       },
     },
 
