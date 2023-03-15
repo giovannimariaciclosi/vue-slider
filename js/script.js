@@ -50,13 +50,24 @@ Consigli del giorno:
     },
 
     mounted() {
-      this.timer = setInterval(()=>{
-        this.nextSlide();
-      }, 3000);
+      this.startTimer();
     },
 
 
     methods: {
+
+      startTimer() {
+        this.timer = setInterval(()=>{
+          this.nextSlide();
+        }, 3000);
+        console.log("timer started");
+      },
+
+      stopTimer() {
+        clearInterval(this.timer);
+        console.log("timer stopped");
+      },
+
 
       showSlide(slideIndex){
         this.activeImageIndex = slideIndex;
