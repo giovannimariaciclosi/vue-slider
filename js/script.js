@@ -49,6 +49,9 @@ Consigli del giorno:
 
     methods: {
 
+      showSlide(slideIndex){
+        this.activeImageIndex = slideIndex;
+      },
 
       nextSlide() {
         if(this.activeImageIndex < this.slides.length - 1) {
