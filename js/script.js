@@ -43,9 +43,18 @@ Consigli del giorno:
 
         activeImageIndex: 0,
 
+        timer: {},
+
 
       }
     },
+
+    mounted() {
+      this.timer = setInterval(()=>{
+        this.nextSlide();
+      }, 3000);
+    },
+
 
     methods: {
 
